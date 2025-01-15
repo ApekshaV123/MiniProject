@@ -1,0 +1,225 @@
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        .header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 20%;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .button {
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 7px;
+            background-color: white;
+        }
+
+        .button-symbol {
+            padding: 25px;
+            border-radius: 7px;
+        }
+
+        .button-equal-symbol {
+            padding: 27px;
+            background-color: navy;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+    </style>
+    <script>
+        let operator = "", number1 = 0, number2 = 0;
+        function onOneClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 1 : `${number1}1`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 1 : ` ${number2}1`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onTwoClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 2 : `${number1}2`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 2 : ` ${number2}2`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onThreeClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 3 : `${number1}3`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 3 : ` ${number2}3`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+
+        function onFourClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 4 : `${number1}4`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 4 : ` ${number2}4`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onFiveClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 5 : `${number1}5`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 5 : ` ${number2}5`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onSixClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 6 : `${number1}6`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 6 : ` ${number2}6`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onSevenClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 7 : `${number1}7`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 7 : ` ${number2}7`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onEightClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 8 : `${number1}8`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 8 : ` ${number2}8`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onNineClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 9 : `${number1}9`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 9 : ` ${number2}9`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onZeroClick() {
+            if (operator === "") {
+                number1 = number1 === 0 ? 0 : `${number1}0`
+                document.getElementById('result').innerText = `${number1}`;
+            } else {
+                number2 = number2 === 0 ? 0 : ` ${number2}0`;
+                document.getElementById('result').innerText = `${number1} ${operator} ${number2}`;
+            }
+
+        }
+        function onPlusClick() {
+            operator = "+";
+            document.getElementById('result').innerText = `${number1} ${operator} `;
+
+        }
+        function onMinusClick() {
+            operator = "-";
+            document.getElementById('result').innerText = `${number1} ${operator} `;
+
+        }
+        function onMultiplyClick() {
+            operator = "*";
+            document.getElementById('result').innerText = `${number1} ${operator} `;
+
+
+        }
+        function onDivisionClick() {
+            operator = "/";
+            document.getElementById('result').innerText = `${number1} ${operator} `;
+
+
+        }
+        function onEqualClick() {
+            let result;
+            switch (operator) {
+                case "+":
+                    result = Number(number1) + Number(number2);
+                    break;
+                case "-":
+                    result = Number(number1) - Number(number2);
+                    break;
+                case "*":
+                    result = Number(number1) * Number(number2);
+                    break;
+                case "/":
+                    result = Number(number1) / Number(number2);
+                    break;
+
+            }
+            document.getElementById('result').innerText=`${number1} ${operator} ${number2} = ${result} `;
+
+
+        }
+        function onClearClick() {
+            operator==="";
+            number1===0;
+            number2===0;
+            document.getElementById('result').innerText="";
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="header">Simple Calculator</div>
+    <div class="container">
+        <div id="result"></div>
+        <button class="button" onclick="onOneClick()">1</button>
+        <button class="button" onclick="onTwoClick()">2</button>
+        <button class="button" onclick="onThreeClick()">3</button>
+        <button class="button" onclick="onFourClick()">4</button><br />
+        <button class="button" onclick="onFiveClick()">5</button>
+        <button class="button" onclick="onSixClick()">6</button>
+        <button class="button" onclick="onSevenClick()">7</button>
+        <button class="button" onclick="onEightClick()">8</button><br />
+        <button class="button" onclick="onNineClick()">9</button>
+        <button class="button" onclick="onZeroClick()">0</button>
+        <button class="button-symbol" onclick="onPlusClick()">+</button>
+        <button class="button-symbol" onclick="onMinusClick()">-</button><br />
+        <button class="button-symbol" onclick="onMultiplyClick()">*</button>
+        <button class="button-symbol" onclick="onDivisionClick()">/</button>
+        <button class="button-equal-symbol" onclick="onEqualClick()">=</button>
+        <button class="button-symbol" onclick="onClearClick()">c</button>
+    </div>
+</body>
+
+</html>
